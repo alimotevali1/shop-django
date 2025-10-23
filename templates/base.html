@@ -1,0 +1,28 @@
+{% load static %}
+{% load render_partial %}
+<!DOCTYPE html>
+<html lang="en">
+{% include 'include/head.html' %}
+{% csrf_token %}
+<body>
+<!-- Topbar Start -->
+{% include 'include/topbar.html' %}
+<!-- Topbar End -->
+{% csrf_token %}
+
+<!-- Navbar Start -->
+{% render_partial 'product:navbar' %}
+<!-- Navbar End -->
+
+
+{% block content %}
+{% endblock %}
+<!-- Footer Start -->
+{% include 'include/footer.html' %}
+<!-- Footer End -->
+
+
+{% include 'include/footer_link.html' %}
+</body>
+
+</html>

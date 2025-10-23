@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'main/css/category.css' %}">
+</head>
+<body>
+<ul id="menu">
+	{% for category in Categoryis  %}
+
+
+        <li class="parent"><a href="#">{{ category.title }}</a>
+		<ul class="child">
+			<li class="parent"><a href="#">Video Games <span class="expand">»</span></a>
+				<ul class="child">
+					<li><a href="#">Car</a></li>
+					<li><a href="#">Bike Race</a></li>
+					<li><a href="#">Fishing</a></li>
+				</ul></li>
+			<li><a href="#">Barbies</a></li>
+			<li><a href="#">Teddy Bear</a></li>
+			<li><a href="#">Golf Set</a></li>
+		</ul></li>
+    {% endfor %}
+
+</ul>
+</body>
+</html>

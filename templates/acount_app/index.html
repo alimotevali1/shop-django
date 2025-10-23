@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>قالب فرم عضویت و ورود :: دریافت شده از وب روبیک</title>
+	<!-- start css and styles -->
+	<link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+	<link type="text/css" href="{% static 'css/style.css' %}" rel="stylesheet" />
+    
+	<!-- end css and styles -->
+</head>
+<body>
+	<div class="container" id="container">
+		<!-- start sing up form -->
+		<div class="form-container sign-up-container">
+			<form action="#" method="">
+				<h1>ایجاد حساب</h1>
+				<div class="social-container">
+					<a href="#" class="social"><i class="fa fa-facebook-f"></i></a>
+					<a href="#" class="social"><i class="fa fa-google-plus"></i></a>
+					<a href="#" class="social"><i class="fa fa-linkedin"></i></a>
+				</div>
+				<span>یا با ایمیل خود حساب ایجاد کنید</span>
+				<input type="text" placeholder="نام" />
+				<input type="email" placeholder="ایمیل" />
+				<input type="password" placeholder="رمز عبور" />
+				<button type="submit">عضویت</button>
+			</form>
+		</div>
+		<!-- end sing up form -->
+		<!-- start sing in form -->
+		<div class="form-container sign-in-container">
+			<form action="#" method="">
+				<h1>ورود</h1>
+				<div class="social-container">
+					<a href="#" class="social"><i class="fa fa-facebook-f"></i></a>
+					<a href="#" class="social"><i class="fa fa-google-plus"></i></a>
+					<a href="#" class="social"><i class="fa fa-linkedin"></i></a>
+				</div>
+				<span>یا با حساب خود وارد شوید</span>
+				<input type="email" placeholder="ایمیل" />
+				<input type="password" placeholder="رمز عبور" />
+				<a href="#">رمز عبور خود را فراموش کرده ام !</a>
+				<button type="submit">ورود</button>
+			</form>
+		</div>
+		<!-- end sing in form -->
+
+		<div class="overlay-container">
+			<div class="overlay">
+				<!-- start sing in overlay -->
+				<div class="overlay-panel overlay-right">
+					<h1>خوش آمدید</h1>
+					<p>برای برقراری ارتباط با ما لطفا حساب کاربری خود را ایجاد کنید</p>
+					<button class="ghost" id="signIn">ورود</button>
+				</div>
+				<!-- end sing in overlay -->
+				<!-- start sing up overlay -->
+				<div class="overlay-panel overlay-left">
+					<h1>سلام، دوست خوبم</h1>
+					<p>وارد حساب کاربری خود شوید و با ما به کشف جهان بپردازید</p>
+					<button class="ghost" id="signUp">عضویت</button>
+				</div>
+				<!-- end sing up overlay -->
+			</div>
+		</div>
+	</div>
+
+
+	<script  src="{% static 'js/scripts.js' %}"></script>
+</body><!-- This template has been downloaded from Webrubik.com -->
+</html>

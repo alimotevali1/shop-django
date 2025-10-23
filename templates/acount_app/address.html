@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load widget_tweaks %}
+{% block content %}
+    <!-- Checkout Start -->
+    <div class="container-fluid">
+        <div class="mr-auto">
+            <div class="">
+                <h5 class="section-title position-relative text-uppercase mb-3">
+                    <span class="bg-secondary pr-3">Billing Address</span>
+                </h5>
+                <div class="bg-light p-30 mb-5">
+                    <form method="post">
+                        {% csrf_token %}
+                        <div class="row">
+                            <div class="col-md-6 form-group">
+                                <label>First Name:</label>
+                                {{ form.first_name|add_class:"form-control" }}
+                                {{ form.first_name.errors }}
+                                <small class="text-muted">{{ form.first_name.help_text }}</small>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label>Last Name</label>
+                                {{ form.last_name|add_class:"form-control" }}
+                                {{ form.last_name.errors }}
+                                <small class="text-muted">{{ form.last_name.help_text }}</small>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label>Email</label>
+                                {{ form.email|add_class:"form-control" }}
+                                {{ form.email.errors }}
+                                <small class="text-muted">{{ form.email.help_text }}</small>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label>Mobile</label>
+                                {{ form.phone|add_class:"form-control" }}
+                                {{ form.phone.errors }}
+                                <small class="text-muted">{{ form.phone.help_text }}</small>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label>Address Line</label>
+                                {{ form.address|add_class:"form-control" }}
+                                {{ form.address.errors }}
+                                <small class="text-muted">{{ form.address.help_text }}</small>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label>Post Code</label>
+                                {{ form.postal_code|add_class:"form-control" }}
+                                {{ form.postal_code.errors }}
+                                <small class="text-muted">{{ form.postal_code.help_text }}</small>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100 mt-3">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Checkout End -->
+{% endblock %}
